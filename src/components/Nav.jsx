@@ -70,6 +70,7 @@ export default function Nav() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 bg-background/96 backdrop-blur-lg flex flex-col items-center justify-center gap-10 md:hidden"
+            onClick={() => setIsOpen(false)}
           >
             {LINKS.map(l => (
               <a
