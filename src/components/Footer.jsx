@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           {/* Logo + tagline */}
           <div className="flex items-center gap-2.5">
-            <img src="/logo.png" alt="" className="h-7 w-7 rounded-full" />
+            <img src="/logo.png" alt="Trading Playbook" className="h-7 w-7 rounded-full" />
             <div>
               <p className="text-sm font-bold text-white">Trading Playbook</p>
               <p className="text-[11px] text-slate-500">For serious traders</p>

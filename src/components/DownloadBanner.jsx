@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function DownloadBanner() {
   return (
-    <section id="download" className="py-24 border-t border-white/[0.05]">
+    <section id="download" className="py-24 border-t border-white/[0.05] scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

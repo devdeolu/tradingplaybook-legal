@@ -27,7 +27,7 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/logo.png" alt="" className="h-8 w-8 rounded-full" />
+            <img src="/logo.png" alt="Trading Playbook" className="h-8 w-8 rounded-full" />
             <span className="font-bold text-white text-[15px] hidden sm:block">Trading Playbook</span>
           </a>
 

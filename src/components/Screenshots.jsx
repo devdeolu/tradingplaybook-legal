@@ -35,14 +35,17 @@ export default function Screenshots() {
 
         <div className="flex flex-col sm:flex-row gap-10 justify-center items-end pb-8">
           {SCREENS.map((s, i) => (
-            <motion.div
+            <div
               key={s.label}
+              className="sm:flex-1 max-w-[200px] mx-auto sm:mx-0"
+              style={{ transform: `rotate(${s.rotate}deg) translateY(${s.translateY}px)` }}
+            >
+            <motion.div
               initial={{ opacity: 0, y: 56 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.65, delay: i * 0.13, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-5 sm:flex-1 max-w-[200px] mx-auto sm:mx-0"
-              style={{ transform: `rotate(${s.rotate}deg) translateY(${s.translateY}px)` }}
+              className="flex flex-col items-center gap-5"
             >
               {/* Phone */}
               <div className="relative w-full">
@@ -66,6 +69,7 @@ export default function Screenshots() {
                 <p className="text-xs text-slate-400 mt-0.5">{s.desc}</p>
               </div>
             </motion.div>
+            </div>
           ))}
         </div>
       </div>

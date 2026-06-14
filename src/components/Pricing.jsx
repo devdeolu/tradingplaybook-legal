@@ -18,7 +18,7 @@ const PLANS = [
   {
     tier: 'Pro',
     price: '$14.99',
-    period: '/mo · or $99.99/yr — save 44%',
+    period: 'or $99.99/yr — save 44%',
     accent: 'primary',
     badge: 'Most Popular',
     features: [
@@ -35,7 +35,7 @@ const PLANS = [
   {
     tier: 'Pro Plus',
     price: '$29.99',
-    period: '/mo · or $199.99/yr — save 44%',
+    period: 'or $199.99/yr — save 44%',
     accent: 'gold',
     badge: 'Multi-Account',
     features: [
@@ -51,7 +51,7 @@ const PLANS = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 border-t border-white/[0.05]">
+    <section id="pricing" className="py-24 border-t border-white/[0.05] scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-[11px] font-bold tracking-[3px] text-primary uppercase mb-3">Plans</p>

@@ -35,7 +35,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 border-t border-white/[0.05]">
+    <section id="features" className="py-24 border-t border-white/[0.05] scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-[11px] font-bold tracking-[3px] text-primary uppercase mb-3">What's Inside</p>
