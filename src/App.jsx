@@ -4,6 +4,7 @@ import Features from './components/Features'
 import Screenshots from './components/Screenshots'
 import Pricing from './components/Pricing'
 import DownloadBanner from './components/DownloadBanner'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Screenshots />
       <Pricing />
       <DownloadBanner />
+      <Footer />
     </div>
   )
 }
