@@ -26,9 +26,13 @@ export default function Nav() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/logo.png" alt="Trading Playbook" className="h-8 w-8 rounded-full" />
-            <span className="font-bold text-white text-[15px] hidden sm:block">Trading Playbook</span>
+          <a href="/" className="flex items-center shrink-0">
+            <div className="h-16 overflow-hidden flex items-center shrink-0">
+              <img src="/logo.png" alt="Trading Playbook" className="h-28 w-auto" />
+            </div>
+            <span className="font-extrabold text-white text-[18px] tracking-tight leading-none -ml-3">
+              Trading Playbook
+            </span>
           </a>
 
           {/* Desktop links */}

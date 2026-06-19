@@ -51,14 +51,14 @@ const PLANS = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 border-t border-white/[0.05] scroll-mt-20">
+    <section id="pricing" className="py-28 border-t border-white/[0.05] scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-[11px] font-bold tracking-[3px] text-primary uppercase mb-3">Plans</p>
-          <h2 className="text-4xl font-black text-white">Start free. Upgrade when you're ready.</h2>
+          <h2 className="text-4xl lg:text-5xl font-black text-white">Start free. Upgrade when you're ready.</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {PLANS.map((plan, i) => {
             const isPrimary = plan.accent === 'primary'
             const isGold = plan.accent === 'gold'
@@ -69,12 +69,12 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
-                className={`relative rounded-2xl p-7 border ${
+                className={`relative rounded-2xl p-7 border transition-all duration-300 ${
                   isPrimary
-                    ? 'bg-[#162d25] border-primary'
+                    ? 'bg-[#162d25] border-primary/60 shadow-[0_0_50px_rgba(126,184,164,0.10)]'
                     : isGold
-                    ? 'bg-[#1f1a0e] border-gold'
-                    : 'bg-card border-white/[0.07]'
+                    ? 'bg-[#1f1a0e] border-gold/50 shadow-[0_0_50px_rgba(212,168,67,0.07)]'
+                    : 'bg-card border-white/[0.07] hover:border-white/15'
                 }`}
               >
                 {plan.badge && (
@@ -89,26 +89,26 @@ export default function Pricing() {
 
                 <p
                   className={`text-[11px] font-bold tracking-[2px] uppercase mb-3 ${
-                    isPrimary ? 'text-primary' : isGold ? 'text-gold' : 'text-slate-400'
+                    isPrimary ? 'text-primary' : isGold ? 'text-gold' : 'text-slate-500'
                   }`}
                 >
                   {plan.tier}
                 </p>
 
-                <p className="text-4xl font-black text-white mb-1">
-                  {plan.price}
+                <div className="flex items-end gap-1 mb-1">
+                  <p className="text-4xl font-black text-white">{plan.price}</p>
                   {plan.tier !== 'Free' && (
-                    <span className="text-base font-normal text-slate-400">/mo</span>
+                    <span className="text-base font-normal text-slate-400 mb-1">/mo</span>
                   )}
-                </p>
-                <p className="text-xs text-slate-400 mb-7">{plan.period}</p>
+                </div>
+                <p className="text-xs text-slate-500 mb-7">{plan.period}</p>
 
                 <ul className="space-y-2.5 mb-8">
                   {plan.features.map(f => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-slate-300">
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-slate-300">
                       <span
-                        className={`mt-0.5 shrink-0 ${
-                          isPrimary ? 'text-primary' : isGold ? 'text-gold' : 'text-slate-500'
+                        className={`mt-0.5 shrink-0 font-bold ${
+                          isPrimary ? 'text-primary' : isGold ? 'text-gold' : 'text-slate-600'
                         }`}
                       >
                         ✓
@@ -120,12 +120,12 @@ export default function Pricing() {
 
                 <a
                   href="#download"
-                  className={`block w-full text-center py-3 rounded-xl font-bold text-sm transition-opacity hover:opacity-90 ${
+                  className={`block w-full text-center py-3 rounded-xl font-bold text-sm transition-all duration-200 ${
                     isPrimary
-                      ? 'bg-primary text-background'
+                      ? 'bg-primary text-background hover:brightness-110'
                       : isGold
-                      ? 'bg-gold text-background'
-                      : 'bg-white/[0.08] text-white'
+                      ? 'bg-gold text-background hover:brightness-110'
+                      : 'bg-white/[0.07] text-white hover:bg-white/[0.12] border border-white/[0.08]'
                   }`}
                 >
                   {plan.cta}
